@@ -1,1 +1,2 @@
 {"question":"Who was the second president of the United States?","answer":"John Adams"}
+{"question":"What is the capital of Switzerland?","answer":"Bern"}

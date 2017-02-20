@@ -1,0 +1,1 @@
+{"text":"Helena is the capital of Montana","cloze":"Helena"}

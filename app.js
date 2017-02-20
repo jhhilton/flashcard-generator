@@ -42,5 +42,34 @@ var appendQuestion = function(questions){
 
 break;
 
+case "cloze":
+
+var clozePrompts = [{
+	type: "input",
+	name: "text",
+	message: "What is the full text of the statement you want to add to the flashcard?"
+}, {
+	type: "input",
+	name: "cloze",
+	message: "What portion of the statement do you want to hide?"
+}];
+
+var appendCloze = function(questions){
+	var newCloze = new ClozeCard(questions.text, questions.cloze);
+	newCloze.PrintIt();
+	var newClozeJSON = JSON.stringify(newCloze);
+	questionArray.push(newClozeJSON);
+	fs.appendFile('clozeflashcard.txt', newClozeJSON + "\n");
+}
+
+    var promptCloze = function() {
+        inquirer.prompt(clozePrompts)
+            .then(appendCloze)
+    };
+
+    promptCloze();
+    
+break;
+
 
 }

@@ -3,7 +3,6 @@ var fs 					= require('fs');
 function BasicCard(question, answer){
 	this.question = question;
 	this.answer = answer;
-	
 }
 
 BasicCard.prototype.PrintIt = function(){
